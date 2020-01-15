@@ -1,6 +1,6 @@
 # Members Only (Ruby on Rails)
 
->  Building User Models, Post, and Comment models
+>  Building User & Post Models, authentications
 
 
 In this project, we build an exclusive clubhouse application where members can write embarrassing posts about non-members. Inside the clubhouse, members can see who the author of a post is but, outside, they can only see the story and wonder who wrote it.
