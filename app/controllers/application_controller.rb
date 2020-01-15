@@ -22,8 +22,8 @@ class ApplicationController < ActionController::Base
     @current_user = nil
   end
 
-  def current_user(user)
-    @current_user = user
+  def signed_in?
+    !current_user.nil?
   end
 
   def remember(user)
