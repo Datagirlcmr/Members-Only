@@ -10,5 +10,9 @@
 
   <body>
     <%= yield %>
+    <% if !signed_in? %>
+      <%= link_to "Login", login_path %>
+    <% end %>
+    <%= link_to "Logout", logout_path, method: :delete %>
   </body>
 </html>
