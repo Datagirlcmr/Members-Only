@@ -1,75 +1,42 @@
 AllCops:
   Exclude:
-<<<<<<< HEAD
-    - "README.md"
-    - "Guardfile"
-    - "Rakefile"
-
-=======
     - "bin/*"
     - "db/**/*"
     - "config/**/*"
     - "Guardfile"
     - "Rakefile"
->>>>>>> 9adf9cc418a5cf181686ce9ce32d5548f1360f4e
   DisplayCopNames: true
 
 Layout/LineLength:
   Max: 120
 Metrics/MethodLength:
-<<<<<<< HEAD
-  Max: 20
-Metrics/AbcSize:
-  Max: 50
-=======
   Include: ["app/controllers/*"]
   Max: 20
 Metrics/AbcSize:
   Include: ["app/controllers/*"]
   Max: 30
->>>>>>> 9adf9cc418a5cf181686ce9ce32d5548f1360f4e
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
   ExcludedMethods: ['describe']
-<<<<<<< HEAD
-  Max: 30
-=======
 Metrics/ModuleLength:
   Enabled: false
 Metrics/CyclomaticComplexity:
   Enabled: false
 Metrics/PerceivedComplexity:
   Enabled: false
->>>>>>> 9adf9cc418a5cf181686ce9ce32d5548f1360f4e
 
 
 Style/Documentation:
   Enabled: false
 Style/ClassAndModuleChildren:
   Enabled: false
-<<<<<<< HEAD
-Style/EachForSimpleLoop:
-  Enabled: false
-Style/AndOr:
-  Enabled: false
-Style/DefWithParentheses:
-  Enabled: false
-Style/FrozenStringLiteralComment:
-  EnforcedStyle: never
-
-=======
 
 Layout/AlignHash:
   EnforcedColonStyle: key
->>>>>>> 9adf9cc418a5cf181686ce9ce32d5548f1360f4e
 Layout/ExtraSpacing:
   AllowForAlignment: false
 Layout/MultilineMethodCallIndentation:
   Enabled: true
-<<<<<<< HEAD
-  EnforcedStyle: indented
-=======
   EnforcedStyle: indented
 
->>>>>>> 9adf9cc418a5cf181686ce9ce32d5548f1360f4e
