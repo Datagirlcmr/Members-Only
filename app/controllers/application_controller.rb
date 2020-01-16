@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
+  helper :all
 
   def sign_in(user)
     session[:user_id] = user.id
@@ -25,6 +26,7 @@ class ApplicationController < ActionController::Base
   def signed_in?
     !current_user.nil?
   end
+  helper_method :signed_in?
 
   def remember(user)
     user.remember_token_generator

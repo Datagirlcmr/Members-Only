@@ -1,6 +1,10 @@
 class SessionsController < ApplicationController
   def new
-    session = {}
+    if signed_in?
+      redirect_to posts_index_path
+    else
+      session = {}
+    end
   end
 
   def create

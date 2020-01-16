@@ -2,11 +2,11 @@ class PostsController < ApplicationController
   before_action :is_signed_in?, only: [:new, :create]
 
   def new
-    @post = Post.new()
+    @post = Post.new
   end
 
   def create
-    post = Post.new(title: params[:post][:title], body: params[:post][:body], user_id: current_user.id)
+    post = current_user.posts.build(post_params)
     if post.save
       redirect_to posts_index_path
     else
@@ -20,5 +20,10 @@ class PostsController < ApplicationController
 
   def is_signed_in?
     redirect_to posts_index_path if !signed_in?
+  end
+
+  private
+  def post_params
+    params.require(:post).permit(:title, :body)
   end
 end
